@@ -1,0 +1,12 @@
+.member-img {
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background: url("../images/andychen.jpeg") no-repeat center / cover;
+}
+
+.sidebar-menu {
+	li:hover {
+		background-color: $gray-200;
+	}
+}

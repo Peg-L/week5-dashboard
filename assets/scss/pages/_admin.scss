@@ -1,0 +1,49 @@
+.add-new-admin {
+	transition: border 0.3s ease-in-out;
+	&:hover {
+		border: 1px solid $primary;
+	}
+}
+
+.btns {
+	.material-symbols-outlined {
+		transition: color 0.2s ease-in-out;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+.table {
+	thead {
+		border-bottom: 2px solid $gray-900;
+		th {
+			padding: 0 0 4px 0;
+		}
+	}
+
+	tbody {
+		tr {
+			cursor: pointer;
+		}
+
+		th,
+		td {
+			vertical-align: middle;
+			padding: 15px 0;
+		}
+	}
+
+	.func-btns {
+		button {
+			&:hover {
+				color: $primary;
+			}
+
+			&:active {
+				border: 1px solid $white;
+			}
+		}
+	}
+}
