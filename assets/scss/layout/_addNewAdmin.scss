@@ -1,0 +1,13 @@
+/* scrollbar width */
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+.btn-sendMail {
+	color: $primary;
+
+	&:hover {
+		background-color: $primary;
+		color: $white;
+	}
+}

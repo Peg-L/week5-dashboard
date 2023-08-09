@@ -320,6 +320,7 @@ $theme-colors: (
 	"dark": $dark,
 	"gray-100": $gray-100,
 	"gray-400": $gray-400,
+	"gray-500": $gray-500,
 	"gray-600": $gray-600,
 	"gray-900": $gray-900,
 ) !default;
@@ -921,7 +922,7 @@ $input-disabled-bg: var(--#{$prefix}secondary-bg) !default;
 $input-disabled-border-color: null !default;
 
 $input-color: var(--#{$prefix}body-color) !default;
-$input-border-color: var(--#{$prefix}border-color) !default;
+$input-border-color: $gray-900; // var(--#{$prefix}border-color) !default;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: $box-shadow-inset !default;
 
@@ -985,8 +986,7 @@ $form-check-transition: null !default;
 $form-check-input-active-filter: brightness(90%) !default;
 
 $form-check-input-bg: $input-bg !default;
-$form-check-input-border: var(--#{$prefix}border-width) solid
-	var(--#{$prefix}border-color) !default;
+$form-check-input-border: $gray-700 solid; // var(--#{$prefix}border-width) solid var(--#{$prefix}border-color) !default;
 $form-check-input-border-radius: 0.25em !default;
 $form-check-radio-border-radius: 50% !default;
 $form-check-input-focus-border: $input-focus-border-color !default;
@@ -1591,8 +1591,8 @@ $modal-backdrop-opacity: 0.5 !default;
 
 $modal-header-border-color: var(--#{$prefix}border-color) !default;
 $modal-header-border-width: $modal-content-border-width !default;
-$modal-header-padding-y: $modal-inner-padding !default;
-$modal-header-padding-x: $modal-inner-padding !default;
+$modal-header-padding-y: $modal-inner-padding * 2 !default;
+$modal-header-padding-x: $modal-inner-padding * 2 !default;
 $modal-header-padding: $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
 $modal-footer-bg: null !default;

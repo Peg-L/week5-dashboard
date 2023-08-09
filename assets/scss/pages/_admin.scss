@@ -1,7 +1,8 @@
 .add-new-admin {
 	transition: border 0.3s ease-in-out;
+
 	&:hover {
-		border: 1px solid $primary;
+		color: $primary;
 	}
 }
 

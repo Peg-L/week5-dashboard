@@ -31,15 +31,15 @@
 
 							<!-- add new admin Modal -->
 							<div
-								class="modal fade"
+								class="modal fade addNewAdmin"
 								id="addNewAdmin"
 								tabindex="-1"
 								aria-labelledby="addNewAdmin"
 								aria-hidden="true">
-								<div class="modal-dialog">
+								<div class="modal-dialog modal-dialog-scrollable">
 									<div class="modal-content">
 										<div class="modal-header">
-											<h1 class="modal-title fs-5" id="addNewAdmin">
+											<h1 class="modal-title h2 fw-bold" id="addNewAdmin">
 												New Admin
 											</h1>
 											<button
@@ -48,18 +48,20 @@
 												data-bs-dismiss="modal"
 												aria-label="Close"></button>
 										</div>
-										<div class="modal-body">
-											<h2>Account</h2>
+										<div class="modal-body pt-0 px-8 pb-8">
+											<h2 class="h3 fw-bold mb-4 mt-2">Account</h2>
 											<form>
-												<div class="mb-3">
-													<label for="adminName" class="form-label">Name</label>
+												<div class="mb-4">
+													<label for="adminName" class="form-label fs-5 mb-1"
+														>Name</label
+													>
 													<input
 														type="name"
 														class="form-control"
 														id="adminName" />
 												</div>
-												<div class="mb-3">
-													<label for="adminEmail" class="form-label"
+												<div class="mb-7">
+													<label for="adminEmail" class="form-label fs-5 mb-1"
 														>Email</label
 													>
 													<input
@@ -69,28 +71,35 @@
 														aria-describedby="emailHelp" />
 												</div>
 											</form>
-											<hr />
-											<h2>Verification</h2>
-											<h3>
-												<span class="material-symbols-outlined text-secondary">
+
+											<hr class="text-gray-500 mb-7" />
+											<h2 class="h3 fw-bold mb-5">Verification</h2>
+											<h3 class="h4 fw-bold d-flex align-items-center mb-5">
+												<span
+													class="material-symbols-outlined text-secondary me-2">
 													warning </span
 												>Unverified
 											</h3>
-											<button
-												type="submit"
-												class="btn btn-outline-gray-400 text-primary">
-												Send Verification Mail
-											</button>
+											<div class="d-grid mb-7">
+												<button
+													type="submit"
+													class="btn btn-outline-gray-400 btn-sendMail">
+													Send Verification Mail
+												</button>
+											</div>
 
-											<hr />
-											<h2>Access Level</h2>
-											<select class="form-select" aria-label="Default select">
+											<hr class="mb-7" />
+											<h2 class="h3 fw-bold mb-4">Access Level</h2>
+											<select
+												class="form-select mb-7"
+												aria-label="Default select">
 												<option selected>-Choose access level-</option>
 												<option value="1">Admin</option>
 												<option value="2">Moderator</option>
 											</select>
-											<hr />
-											<h2>Custom Access</h2>
+
+											<hr class="mb-7" />
+											<h2 class="h3 fw-bold mb-4">Custom Access</h2>
 											<div class="form-check">
 												<input
 													class="form-check-input"
@@ -142,14 +151,41 @@
 												</label>
 											</div>
 										</div>
-										<div class="modal-footer">
+										<div class="modal-footer py-3 px-8">
 											<button
 												type="button"
-												class="btn btn-outline-primary"
+												class="btn btn-outline-primary py-1 px-8"
 												data-bs-dismiss="modal">
 												Cancel
 											</button>
-											<button type="button" class="btn btn-primary">Add</button>
+											<button
+												type="button"
+												class="btn btn-primary py-1 px-8"
+												　id="saveChangesButton"
+												data-bs-toggle="modal"
+												data-bs-target="#successAlert">
+												Add
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- 成功提示框 -->
+							<div
+								class="modal fade"
+								id="successAlert"
+								tabindex="-1"
+								aria-labelledby="successAlertLabel"
+								aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div
+											class="modal-body text-primary fw-bold d-flex align-items-center">
+											<span class="material-symbols-outlined me-2">
+												check_circle
+											</span>
+											Successfully Added !!
 										</div>
 									</div>
 								</div>
@@ -184,57 +220,18 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<!-- 按鈕:一行資料 -->
+						<tr data-bs-toggle="modal" data-bs-target="#seeMoreModal">
 							<th scope="row">#1</th>
 							<td>Emir Wicks</td>
 							<td>emir.wicks@mail.com</td>
 							<td>Yes</td>
 							<td class="text-end func-btns">
-								<button
-									class="btn p-0 me-7"
-									type="button"
-									data-bs-toggle="modal"
-									data-bs-target="#seeMoreModal">
+								<button class="btn p-0 me-7" type="button">
 									<span class="material-symbols-outlined align-middle">
 										visibility
 									</span>
 								</button>
-
-								<!-- see more Modal -->
-								<div
-									class="modal fade"
-									id="seeMoreModal"
-									tabindex="-1"
-									aria-labelledby="seeMoreModalLabel"
-									aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h1 class="modal-title fs-5" id="seeMoreModalLabel">
-													Modal title
-												</h1>
-												<button
-													type="button"
-													class="btn-close"
-													data-bs-dismiss="modal"
-													aria-label="Close"></button>
-											</div>
-											<div class="modal-body">...</div>
-											<div class="modal-footer">
-												<button
-													type="button"
-													class="btn btn-secondary"
-													data-bs-dismiss="modal">
-													Close
-												</button>
-												<button type="button" class="btn btn-primary">
-													Save changes
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-
 								<button class="btn p-0">
 									<span class="material-symbols-outlined align-middle">
 										edit
@@ -452,6 +449,71 @@
 					</tbody>
 				</table>
 
+				<!-- see more Modal -->
+				<div
+					class="modal fade seeMoreModal"
+					id="seeMoreModal"
+					data-bs-backdrop="static"
+					data-bs-keyboard="false"
+					tabindex="-1"
+					aria-labelledby="staticBackdropLabel"
+					aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-body p-8 d-flex">
+								<img
+									class="me-7"
+									src="../assets/images/emir.jpeg"
+									alt="Emir Picture" />
+								<div class="admin-info flex-grow-1 text-start">
+									<div class="d-flex justify-content-between">
+										<p class="m-0">#1</p>
+										<button
+											type="button"
+											class="btn-close"
+											data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<p class="mb-0">Admin</p>
+									<h2 class="h2 fw-bold mb-2">Emir Wicks</h2>
+									<a
+										class="text-gray-600 mb-4 d-block"
+										href="mailto:emir.wicks@mail.com"
+										>emir.wicks@mail.com</a
+									>
+									<div
+										class="d-flex justify-content-between align-items-center">
+										<p class="py-1 px-2 h5 m-0 bg-gray-100">Verified</p>
+										<span
+											type="button"
+											class="material-symbols-outlined text-primary"
+											data-bs-toggle="collapse"
+											href="#collapse"
+											role="button"
+											aria-expanded="false"
+											aria-controls="collapseExample">
+											expand_more
+										</span>
+									</div>
+								</div>
+							</div>
+							<div
+								id="collapse"
+								class="modal-footer border-top-0 pt-0 pb-8 px-8 collapse">
+								<button
+									type="button"
+									class="btn btn-outline-secondary m-0 me-4 py-1 px-8"
+									data-bs-dismiss="modal">
+									Deactivate
+								</button>
+								<button type="button" class="btn btn-primary m-0 py-1 px-8">
+									Edit
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<nav aria-label="Page navigation example">
 					<ul class="pagination justify-content-end">
 						<li class="page-item disabled">
@@ -473,6 +535,7 @@
 				</nav>
 			</div>
 		</div>
+
 		<script type="module" src="../main.js"></script>
 	</body>
 </html>
