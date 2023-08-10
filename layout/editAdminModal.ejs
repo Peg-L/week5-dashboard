@@ -1,0 +1,141 @@
+<div
+	class="modal fade"
+	id="editAdminModal"
+	tabindex="-1"
+	aria-labelledby="editAdminModal"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title h2 fw-bold" id="editAdminModal">Edit Admin</h1>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body pt-0 px-8 pb-8">
+				<h2 class="h3 fw-bold mb-4 mt-2">Account</h2>
+				<form>
+					<div class="mb-4">
+						<label for="adminName" class="form-label fs-5 mb-1">Name</label>
+						<input
+							type="name"
+							class="form-control bg-gray-100 border-0 p-3"
+							id="adminName"
+							value="Emir Wicks" />
+					</div>
+					<div class="mb-7">
+						<label for="adminEmail" class="form-label fs-5 mb-1">Email</label>
+						<input
+							type="email"
+							class="form-control bg-gray-100 border-0 p-3"
+							id="adminEmail"
+							value="emir.wicks@mail.com"
+							aria-describedby="emailHelp" />
+					</div>
+				</form>
+
+				<hr class="text-gray-500 mb-7" />
+				<h2 class="h3 fw-bold mb-5">Verification</h2>
+				<div class="d-flex justify-content-between">
+					<h3 class="h4 fw-bold d-flex align-items-center mb-5">
+						<span class="material-symbols-outlined text-primary me-2">
+							check_circle </span
+						>Verified
+					</h3>
+					<time datetime="2020-4-12">2020/4/12</time>
+				</div>
+
+				<div class="d-grid mb-7">
+					<button
+						type="submit"
+						class="btn btn-outline-gray-400 btn-sendMail fw-bold p-3"
+						disabled>
+						Send Verification Mail
+					</button>
+				</div>
+
+				<hr class="mb-7" />
+				<h2 class="h3 fw-bold mb-4">Access Level</h2>
+				<select class="form-select mb-7 p-3" aria-label="Default select">
+					<option>-Choose access level-</option>
+					<option value="1" selected>Admin</option>
+					<option value="2">Moderator</option>
+				</select>
+
+				<hr class="mb-7" />
+				<h2 class="h3 fw-bold mb-4">Custom Access</h2>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						value=""
+						id="lectureAccess" />
+					<label class="form-check-label" for="lectureAccess"> Lecture </label>
+				</div>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						value=""
+						id="couponAccess" />
+					<label class="form-check-label" for="couponAccess"> Coupon </label>
+				</div>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						value=""
+						id="messageAccess" />
+					<label class="form-check-label" for="messageAccess"> Message </label>
+				</div>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						value=""
+						id="settingAccess" />
+					<label class="form-check-label" for="settingAccess"> Setting </label>
+				</div>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						value=""
+						id="taskMenuAccess" />
+					<label class="form-check-label" for="taskMenuAccess">
+						Task Menu
+					</label>
+				</div>
+
+				<hr class="mb-7" />
+				<h2 class="h3 fw-bold mb-4">Deactivate Account</h2>
+				<h3 class="h4 text-secondary d-flex align-items-center mb-5">
+					<span class="material-symbols-outlined me-2"> warning </span>This
+					cannot be undone!
+				</h3>
+				<div class="d-grid mb-7">
+					<button type="submit" class="btn btn-outline-secondary p-3">
+						Deactivate This Account
+					</button>
+				</div>
+			</div>
+			<div class="modal-footer py-3 px-8">
+				<button
+					type="button"
+					class="btn btn-outline-primary py-1 px-8"
+					data-bs-dismiss="modal">
+					Cancel
+				</button>
+				<button
+					type="button"
+					class="btn btn-primary py-1 px-8"
+					data-bs-toggle="modal"
+					data-bs-target="#editSuccessAlert">
+					Update
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
