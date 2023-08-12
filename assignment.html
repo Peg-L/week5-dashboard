@@ -4,11 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>ANSWER 後台</title>
-		<script type="module" crossorigin src="/week5-dashboard/assets/main-bae9d171.js"></script>
-		<link rel="stylesheet" href="/week5-dashboard/assets/main-ec04dc9c.css">
+		<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+		<script type="module" crossorigin src="/week5-dashboard/assets/main-83b546ce.js"></script>
+		<link rel="stylesheet" href="/week5-dashboard/assets/main-b47c3841.css">
 	</head>
 	<body>
-		<nav class="sidebar bg-light d-flex flex-column justify-content-between py-8">
+		<div class="d-flex assignment">
+			<!-- sidebar -->
+			<nav
+	class="sidebar bg-light d-flex flex-column justify-content-between py-8 min-vh-100">
 	<div class="sidebar-top">
 		<h1 class="mb-7">
 			<a class="px-8" href="###"
@@ -16,51 +20,44 @@
 			/></a>
 		</h1>
 		<ul class="list-unstyled sidebar-menu">
-			<li class="mb-4">
-				<a class="text-gray-900 fs-4 fw-bold px-8" href="###"
-					><span class="material-symbols-outlined me-3 align-middle py-1">
-						insert_chart </span
+			<li>
+				<a class="text-gray-900 fs-4 fw-bold px-8 py-3 d-block" href="###">
+					<span class="material-icons me-3 align-middle"> insert_chart </span
 					>Dashboard</a
 				>
 			</li>
-			<li class="mb-4">
-				<a class="text-gray-900 fs-4 py-1 fw-bold px-8" href="###"
-					><span class="material-symbols-outlined me-3 align-middle py-1">
-						forum </span
+			<li>
+				<a class="text-gray-900 fs-4 py-1 fw-bold px-8 py-3 d-block" href="###"
+					><span class="material-icons me-3 align-middle"> forum </span
 					>Question</a
 				>
 			</li>
-			<li class="mb-4">
+			<li>
 				<a
-					class="fs-4 py-1 fw-bold px-8 text-primary"
+					class="fs-4 py-1 fw-bold px-8 py-3 d-block text-primary border-start border-4 border-primary"
 					href="./assignment.html"
-					><span class="material-symbols-outlined me-3 align-middle py-1">
-						assignment </span
+					><span class="material-icons me-3 align-middle"> assignment </span
 					>Assignment</a
 				>
 			</li>
-			<li class="mb-4">
-				<a class="text-gray-900 fs-4 py-1 fw-bold px-8" href="###"
-					><span class="material-symbols-outlined me-3 align-middle py-1">
-						video_library </span
+			<li>
+				<a class="text-gray-900 fs-4 py-1 fw-bold px-8 py-3 d-block" href="###"
+					><span class="material-icons me-3 align-middle"> video_library </span
 					>Course</a
 				>
 			</li>
-			<li class="mb-4">
+			<li>
 				<a
-					class="fs-4 py-1 fw-bold px-8 text-gray-900"
+					class="fs-4 py-1 fw-bold px-8 py-3 d-block text-gray-900"
 					href="./admin.html"
-					><span class="material-symbols-outlined me-3 align-middle py-1">
-						group </span
-					>Admin</a
+					><span class="material-icons me-3 align-middle"> group </span>Admin</a
 				>
 			</li>
-			<li class="mb-4">
-				<a class="text-gray-900 fs-4 py-1 fw-bold px-8" href="###"
-					><span class="material-symbols-outlined me-3 align-middle py-1">
-						settings </span
-					>Settings</a
-				>
+			<li>
+				<a class="text-gray-900 fs-4 py-1 fw-bold px-8 py-3 d-block" href="###">
+					<span class="material-icons me-3 align-middle"> settings </span
+					>Settings
+				</a>
 			</li>
 		</ul>
 	</div>
@@ -68,10 +65,498 @@
 		<div class="member-img me-4"></div>
 		<div class="member-info">
 			<h3 class="fs-4 mb-1 fw-bold">Andy Chen</h3>
-			<h4 class="text-gray-600 fs-5">andy0401@mail.com</h4>
+			<h4 class="text-gray-600 fs-5 m-0">andy0401@mail.com</h4>
 		</div>
 	</div>
 </nav>
+
+			<!-- 內容 -->
+			<div class="container">
+				<!-- navbar -->
+				<nav class="navbar py-8">
+	<div class="container-fluid gx-0">
+		<div class="navbar-left d-flex">
+			<h1 class="fs-2 fw-bold m-0 me-9" href="#">
+				Assignment
+			</h1>
+
+			<!-- add new admin Button trigger modal -->
+			<div
+				class="d-flex align-items-center d-none">
+				<button
+	type="button"
+	class="btn d-flex align-items-center fs-4 fw-bold p-0 pe-1 navbar-btn"
+	data-bs-toggle="modal"
+	data-bs-target="#addNewAdmin">
+	<span class="material-icons text-primary me-2"> add </span>Add New Admin
+</button>
+			</div>
+
+			<div
+				class="d-flex align-items-center ">
+				<div class="dropdown">
+	<button
+		type="button"
+		class="btn d-flex border-0 align-items-center fs-4 fw-bold p-1 navbar-btn"
+		type="button"
+		data-bs-toggle="dropdown"
+		aria-expanded="false">
+		All Courses
+		<span class="material-icons text-primary"> expand_more </span>
+	</button>
+
+	<ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="#">HTML&CSS</a></li>
+		<li><a class="dropdown-item" href="#">Bootstrap 5</a></li>
+		<li><a class="dropdown-item" href="#">Web Layout</a></li>
+		<li><a class="dropdown-item" href="#">JavaScript</a></li>
+		<li><a class="dropdown-item" href="#">Vue</a></li>
+		<li><a class="dropdown-item" href="#">React</a></li>
+	</ul>
+</div>
+			</div>
+
+			<!-- add new admin Modal -->
+			<div
+	class="modal fade addNewAdmin"
+	id="addNewAdmin"
+	tabindex="-1"
+	aria-labelledby="addNewAdmin"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title h2 fw-bold" id="addNewAdmin">New Admin</h1>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body pt-0 px-8 pb-8">
+				<h2 class="h3 fw-bold mb-4 mt-2">Account</h2>
+				<form>
+					<div class="mb-4">
+						<label for="adminName" class="form-label fs-5 mb-1">Name</label>
+						<input type="name" class="form-control p-3" id="adminName" />
+					</div>
+					<div class="mb-7">
+						<label for="adminEmail" class="form-label fs-5 mb-1">Email</label>
+						<input
+							type="email"
+							class="form-control p-3"
+							id="adminEmail"
+							aria-describedby="emailHelp" />
+					</div>
+				</form>
+
+				<hr class="text-gray-500 mb-7" />
+				<h2 class="h3 fw-bold mb-5">Verification</h2>
+				<h3 class="h4 fw-bold d-flex align-items-center mb-5">
+					<span class="material-icons text-secondary me-2"> warning </span
+					>Unverified
+				</h3>
+				<div class="d-grid mb-7">
+					<button
+						type="submit"
+						class="btn btn-outline-gray-400 btn-sendMail p-3">
+						Send Verification Mail
+					</button>
+				</div>
+
+				<hr class="mb-7" />
+				<h2 class="h3 fw-bold mb-4">Access Level</h2>
+				<select class="form-select mb-7 p-3" aria-label="Default select">
+					<option selected>-Choose access level-</option>
+					<option value="1">Admin</option>
+					<option value="2">Moderator</option>
+				</select>
+
+				<hr class="mb-7" />
+				<h2 class="h3 fw-bold mb-4">Custom Access</h2>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						value=""
+						id="lectureAccess" />
+					<label class="form-check-label" for="lectureAccess"> Lecture </label>
+				</div>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						value=""
+						id="couponAccess" />
+					<label class="form-check-label" for="couponAccess"> Coupon </label>
+				</div>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						value=""
+						id="messageAccess" />
+					<label class="form-check-label" for="messageAccess"> Message </label>
+				</div>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						value=""
+						id="settingAccess" />
+					<label class="form-check-label" for="settingAccess"> Setting </label>
+				</div>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						value=""
+						id="taskMenuAccess" />
+					<label class="form-check-label" for="taskMenuAccess">
+						Task Menu
+					</label>
+				</div>
+			</div>
+			<div class="modal-footer py-3 px-8">
+				<button
+					type="button"
+					class="btn btn-outline-primary py-1 px-8"
+					data-bs-dismiss="modal">
+					Cancel
+				</button>
+				<button
+					type="button"
+					class="btn btn-primary py-1 px-8"
+					　id="saveChangesButton"
+					data-bs-toggle="modal"
+					data-bs-target="#successAlert">
+					Add
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+			<!-- new Admin 成功提示訊息 -->
+			<div
+	class="modal fade"
+	id="successAlert"
+	tabindex="-1"
+	aria-labelledby="successAlertLabel"
+	aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body text-primary fw-bold d-flex align-items-center">
+				<span class="material-icons me-2"> check_circle </span>
+				Successfully Added !!
+			</div>
+		</div>
+	</div>
+</div>
+
+			<!-- edit Admin 成功提示訊息 -->
+			<div
+	class="modal fade"
+	id="editSuccessAlert"
+	tabindex="-1"
+	aria-labelledby="editSuccessAlert"
+	aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body text-primary fw-bold d-flex align-items-center">
+				<span class="material-icons me-2"> check_circle </span>
+				Successfully Edited !!
+			</div>
+		</div>
+	</div>
+</div>
+		</div>
+		<div class="btns d-flex">
+			<a class="text-gray-900" href="###">
+				<span class="material-icons me-6"> search </span>
+			</a>
+			<a class="text-gray-900" href="###">
+				<span class="material-icons"> notifications_active </span>
+			</a>
+		</div>
+	</div>
+</nav>
+
+				<div class="assignment-content d-flex pt-3 pb-8">
+					<div class="comment-list-group me-4">
+						<div class="d-flex align-items-center mb-1">
+							<h2 class="fs-4 fw-bold m-0">All (4)</h2>
+							<span class="material-icons text-primary"> expand_more </span>
+						</div>
+						<div class="list-group">
+							<a
+								href="#"
+								class="list-group-item list-group-item-action active p-3"
+								aria-current="true">
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="fs-6 mb-1">Chapter Assignment 2</h5>
+									<small class="fs-6">4 hrs ago</small>
+								</div>
+								<div class="d-flex justify-content-between align-items-end">
+									<p class="fs-4 fw-bold m-0">Please check this file…</p>
+									<small class="fs-6">Emily Wang</small>
+								</div>
+							</a>
+							<a
+								href="#"
+								class="list-group-item list-group-item-action p-3"
+								aria-current="true">
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="fs-6 mb-1">Chapter Assignment 1</h5>
+									<small class="fs-6">12 hrs ago</small>
+								</div>
+								<div class="d-flex justify-content-between align-items-end">
+									<p class="fs-4 fw-bold m-0">My Homework</p>
+									<small class="fs-6">David Xu</small>
+								</div>
+							</a>
+							<a
+								href="#"
+								class="list-group-item list-group-item-action p-3"
+								aria-current="true">
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="fs-6 mb-1">Final Assignment</h5>
+									<small class="fs-6">18 hrs ago</small>
+								</div>
+								<div class="d-flex justify-content-between align-items-end">
+									<p class="fs-4 fw-bold m-0">Have a problem with this…</p>
+									<small class="fs-6">Tony Wei</small>
+								</div>
+							</a>
+							<a
+								href="#"
+								class="list-group-item list-group-item-action p-3"
+								aria-current="true">
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="fs-6 mb-1">Final Assignment</h5>
+									<small class="fs-6">19 hrs ago</small>
+								</div>
+								<div class="d-flex justify-content-between align-items-end">
+									<p class="fs-4 fw-bold m-0">Did I do it right?</p>
+									<small class="fs-6">Christina Lin</small>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="comment-content-group position-relative">
+						<p class="fs-6 text-gray-600 mb-2 text-end">2 comments</p>
+						<div class="card mb-4">
+							<div class="card-header px-4 py-3">
+								<div
+									href="#"
+									class="list-group-item active"
+									aria-current="true">
+									<div
+										class="w-100 d-flex justify-content-between align-items-center">
+										<div>
+											<h5 class="fs-6 mb-1">Chapter Assignment 2 / HTML&CSS</h5>
+											<p class="fs-4 fw-bold m-0">
+												Please check this file for me, thanks!
+											</p>
+										</div>
+										<span type="button" class="material-icons">
+											more_vert
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card-body px-4 ps-4 pe-8">
+								<div class="card-item d-flex">
+									<div class="user-img img-1 me-2"></div>
+									<div class="card-info">
+										<div class="mb-4">
+											<h4 class="fs-4 fw-bold m-0">Emily Wang</h4>
+											<time class="fs-6 text-gray-600" datetime="10:38"
+												>10:38 AM (4 hours ago)</time
+											>
+										</div>
+										<p class="fs-5 mb-4">
+											Hi Teacher, the attached file is my homework of chapter 2.
+											And here comes a question: Why in the following code the
+											height of the <code>div</code> is bigger than the height
+											of the <code>img</code> ? There is a gap below the image,
+											but it doesn’t seems to be a padding/margin.<br />What is
+											the gap or extra space below image?
+										</p>
+										<button
+											class="d-flex align-items-center btn btn-outline-gray-400 text-gray-600 fw-bold py-2 ps-3 pe-4 me-4">
+											<span class="material-icons me-2"> attach_file </span
+											>HW-2-David.zip
+										</button>
+										<hr class="text-gray-600" />
+									</div>
+								</div>
+								<div class="card-item d-flex">
+									<div class="user-img img-2 me-2"></div>
+									<div class="card-info">
+										<div class="mb-4 d-flex justify-content-between">
+											<div>
+												<h4 class="fs-4 fw-bold m-0">Andy Chen (You)</h4>
+												<time class="fs-6 text-gray-600" datetime="10:38"
+													>13:24 AM (1 hours ago)</time
+												>
+											</div>
+											<div class="d-flex btns">
+												<span
+													type="button"
+													class="material-icons-outlined me-7">
+													star_border
+												</span>
+												<span type="button" class="material-icons">edit</span>
+											</div>
+										</div>
+										<p class="fs-5">
+											Hi David, by default, an image is rendered inline, like a
+											letter so it sits on the same line that a, b, c and d sit
+											on. There is space below that line for the descenders you
+											find on letters like g, j, p and q.
+											<br />
+											<br />
+											You can:
+											<br />
+											<br />
+											• adjust the <code>vertical-align</code> of the image to
+											position it elsewhere (e.g. the <code>middle</code> ) or
+											<br />
+											• change the <code>display</code> so it isn't inline.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div
+							class="btn-toolbar d-flex justify-content-between"
+							role="toolbar"
+							aria-label="Toolbar with button groups">
+							<ul class="pagination d-flex align-items-center m-0">
+								<span type="button" class="material-icons-outlined me-7">
+									navigate_before
+								</span>
+								<span type="button" class="material-icons-outlined">
+									navigate_next
+								</span>
+							</ul>
+							<div role="group" aria-label="Second group">
+								<button
+									type="button"
+									class="btn btn-outline-primary py-1 px-8 me-4">
+									Mark as read
+								</button>
+								<button
+									type="button"
+									class="btn btn-primary py-1 px-8"
+									id="replyButton">
+									Reply
+								</button>
+							</div>
+
+							<div class="ckeditor d-none">
+								<div id="editor"></div>
+								<div class="d-flex">
+									<div class="ck-btns mb-4 me-7">
+										<button
+											class="cancel-btn btn btn-outline-primary py-1 px-8 me-2">
+											Cancel
+										</button>
+										<button
+											class="reply-btn btn btn-primary py-1 px-8"
+											id="replyButton"
+											data-bs-toggle="modal"
+											data-bs-target="#replySuccess">
+											Reply
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- comment success modal -->
+							<div
+								class="modal fade fw-bold"
+								id="replySuccess"
+								tabindex="-1"
+								aria-labelledby="replySuccess"
+								aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div
+											class="modal-body text-primary fw-bold d-flex align-items-center">
+											<span class="material-icons me-2"> check_circle </span>
+											Successfully Replied !!
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			ClassicEditor.create(document.querySelector("#editor"), {
+				placeholder: "Reply an answer…",
+				heading: {
+					options: [
+						{
+							model: "paragraph",
+							title: "Body Text",
+							class: "ck-heading_paragraph",
+						},
+						{
+							model: "heading1",
+							view: "h1",
+							title: "Heading 1",
+							class: "ck-heading_heading1",
+						},
+						{
+							model: "heading2",
+							view: "h2",
+							title: "Heading 2",
+							class: "ck-heading_heading2",
+						},
+					],
+				},
+				toolbar: [
+					"heading",
+					"bold",
+					"italic",
+					"bulletedList",
+					"numberedList",
+					"uploadImage",
+					"link",
+					"code", // 沒顯示
+				],
+			})
+				.then((res) => {
+					console.log("success");
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+
+			const editor = document.querySelector(".ckeditor");
+			const replyBtn = document.getElementById("replyButton");
+
+			const cancelButton = document.querySelector(".cancel-btn");
+			const replyButton = document.querySelector(".reply-btn");
+
+			replyBtn.addEventListener("click", () => {
+				editor.classList.remove("d-none");
+			});
+
+			cancelButton.addEventListener("click", () => {
+				editor.classList.add("d-none");
+			});
+
+			replyButton.addEventListener("click", () => {
+				editor.classList.add("d-none");
+			});
+		</script>
 
 		
 	</body>
