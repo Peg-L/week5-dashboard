@@ -1,4 +1,4 @@
-.add-new-admin {
+.navbar-btn {
 	transition: border 0.3s ease-in-out;
 
 	&:hover {
@@ -7,7 +7,8 @@
 }
 
 .btns {
-	.material-symbols-outlined {
+	.material-icons,
+	.material-icons-outlined {
 		transition: color 0.2s ease-in-out;
 
 		&:hover {

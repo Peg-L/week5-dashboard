@@ -1,0 +1,50 @@
+.comment-list-group {
+	width: calc((320px / 918px) * 100%);
+}
+
+.comment-content-group {
+	width: calc((536px / 918px) * 100%);
+}
+
+.card-item {
+	.user-img {
+		width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		aspect-ratio: 1;
+	}
+
+	.img-1 {
+		background: url("../images/emilywang.jpeg") no-repeat center / cover;
+	}
+
+	.img-2 {
+		background: url("../images/andychen.jpeg") no-repeat center / cover;
+	}
+}
+
+code {
+	font-family: "Roboto Mono", monospace;
+}
+
+.ckeditor {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+}
+
+.ck-btns {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.ck-editor__editable {
+	height: 263px;
+
+	&::before {
+		content: attr(data-placeholder);
+		color: $gray-100;
+	}
+}

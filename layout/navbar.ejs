@@ -1,0 +1,37 @@
+<nav class="navbar py-8">
+	<div class="container-fluid gx-0">
+		<div class="navbar-left d-flex">
+			<h1 class="fs-2 fw-bold m-0 me-9" href="#">
+				<%= page === 'admin' ? 'Admin' : 'Assignment' %>
+			</h1>
+
+			<!-- add new admin Button trigger modal -->
+			<div
+				class="d-flex align-items-center <%= page === 'assignment' ? 'd-none' : '' %>">
+				<%- include("./layout/newAdminButton") -%>
+			</div>
+
+			<div
+				class="d-flex align-items-center <%= page === 'admin' ? 'd-none' : '' %>">
+				<%- include("./layout/coursesFilter") -%>
+			</div>
+
+			<!-- add new admin Modal -->
+			<%- include("./layout/newAdminModal") -%>
+
+			<!-- new Admin 成功提示訊息 -->
+			<%- include("./layout/newAdminSuccess") -%>
+
+			<!-- edit Admin 成功提示訊息 -->
+			<%- include("./layout/editAdminSuccess") -%>
+		</div>
+		<div class="btns d-flex">
+			<a class="text-gray-900" href="###">
+				<span class="material-icons me-6"> search </span>
+			</a>
+			<a class="text-gray-900" href="###">
+				<span class="material-icons"> notifications_active </span>
+			</a>
+		</div>
+	</div>
+</nav>

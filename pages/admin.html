@@ -4,6 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>ANSWER 後台</title>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 	</head>
 	<body>
 		<div class="d-flex">
@@ -11,376 +14,333 @@
 			<%- include('./layout/sidebar', {page: "admin"}); -%>
 
 			<!-- 內容 -->
-			<div class="container p-8">
+			<div class="container">
 				<!-- navbar -->
-				<nav class="navbar p-0 mb-9">
-					<div class="container-fluid gx-0">
-						<div class="navbar-left d-flex">
-							<div class="fs-2 fw-bold me-9" href="#">Admin</div>
+				<%- include("./layout/navbar", {page: "admin"}) -%>
 
-							<!-- add new admin Button trigger modal -->
-							<%- include("./layout/newAdminButton") -%>
-
-							<!-- add new admin Modal -->
-							<%- include("./layout/newAdminModal") -%>
-
-							<!-- new Admin 成功提示訊息 -->
-							<%- include("./layout/newAdminSuccess") -%>
-
-							<!-- edit Admin 成功提示訊息 -->
-							<%- include("./layout/editAdminSuccess") -%>
-						</div>
-						<div class="btns d-flex">
-							<a class="text-gray-900" href="###">
-								<span class="material-symbols-outlined me-6"> search </span>
-							</a>
-							<a class="text-gray-900" href="###">
-								<span class="material-symbols-outlined">
-									notifications_active
-								</span>
-							</a>
-						</div>
-					</div>
-				</nav>
-
-				<table class="table table-hover mb-10">
-					<thead>
-						<tr>
-							<th scope="col-1">
-								ID<span
-									class="material-symbols-outlined text-primary align-middle">
-									arrow_downward_alt
-								</span>
-							</th>
-							<th class="col-3" scope="col">Name</th>
-							<th class="col-4" scope="col">Email</th>
-							<th class="col-2" scope="col">Verified</th>
-							<th class="col-1" scope="col"></th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- 按鈕:一行資料 -->
-						<tr data-bs-toggle="modal" data-bs-target="#seeMoreModal">
-							<th scope="row">#1</th>
-							<td>Emir Wicks</td>
-							<td>emir.wicks@mail.com</td>
-							<td>Yes</td>
-							<td class="text-end func-btns">
-								<button class="btn p-0 me-7" type="button">
-									<span class="material-symbols-outlined align-middle">
-										visibility
+				<div class="admin-content pt-3 pb-8">
+					<table class="table table-hover mb-10">
+						<thead>
+							<tr>
+								<th scope="col-1">
+									ID<span class="material-icons text-primary align-middle">
+										arrow_downward_alt
 									</span>
-								</button>
-								<button class="btn p-0">
-									<span
-										type="button"
-										class="material-symbols-outlined align-middle"
-										data-bs-toggle="modal"
-										data-bs-target="#editAdminModal">
-										edit
-									</span>
-								</button>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">#2</th>
-							<td>Zaina Goldsmith</td>
-							<td>zaina.goldsmith@mail.com</td>
-							<td>Yes</td>
-							<td class="text-end func-btns">
-								<button
-									class="btn p-0 me-7"
-									type="button"
-									data-bs-toggle="modal"
-									data-bs-target="#exampleModal">
-									<span class="material-symbols-outlined align-middle">
-										visibility
-									</span>
-								</button>
-
-								<button class="btn p-0">
-									<span class="material-symbols-outlined align-middle">
-										edit
-									</span>
-								</button>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">#3</th>
-							<td>Mahima Lopez</td>
-							<td>mahima.lopez@mail.com</td>
-							<td>Yes</td>
-							<td class="text-end func-btns">
-								<button
-									class="btn p-0 me-7"
-									type="button"
-									data-bs-toggle="modal"
-									data-bs-target="#exampleModal">
-									<span class="material-symbols-outlined align-middle">
-										visibility
-									</span>
-								</button>
-
-								<button class="btn p-0">
-									<span class="material-symbols-outlined align-middle">
-										edit
-									</span>
-								</button>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">#4</th>
-							<td>Pharrell Murray</td>
-							<td>pharrell.murray@mail.com</td>
-							<td>Yes</td>
-							<td class="text-end func-btns">
-								<button
-									class="btn p-0 me-7"
-									type="button"
-									data-bs-toggle="modal"
-									data-bs-target="#exampleModal">
-									<span class="material-symbols-outlined align-middle">
-										visibility
-									</span>
-								</button>
-
-								<button class="btn p-0">
-									<span class="material-symbols-outlined align-middle">
-										edit
-									</span>
-								</button>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">#5</th>
-							<td>Annika Mcbride</td>
-							<td>annika.mcbride@mail.com</td>
-							<td>Yes</td>
-							<td class="text-end func-btns">
-								<button
-									class="btn p-0 me-7"
-									type="button"
-									data-bs-toggle="modal"
-									data-bs-target="#exampleModal">
-									<span class="material-symbols-outlined align-middle">
-										visibility
-									</span>
-								</button>
-
-								<button class="btn p-0">
-									<span class="material-symbols-outlined align-middle">
-										edit
-									</span>
-								</button>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">#6</th>
-							<td>Fatimah Clark</td>
-							<td>fatimah.clark@mail.com</td>
-							<td>Yes</td>
-							<td class="text-end func-btns">
-								<button
-									class="btn p-0 me-7"
-									type="button"
-									data-bs-toggle="modal"
-									data-bs-target="#exampleModal">
-									<span class="material-symbols-outlined align-middle">
-										visibility
-									</span>
-								</button>
-
-								<button class="btn p-0">
-									<span class="material-symbols-outlined align-middle">
-										edit
-									</span>
-								</button>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">#7</th>
-							<td>Klaudia Rhodes</td>
-							<td>klaudia.rhodes@mail.com</td>
-							<td>Yes</td>
-							<td class="text-end func-btns">
-								<button
-									class="btn p-0 me-7"
-									type="button"
-									data-bs-toggle="modal"
-									data-bs-target="#exampleModal">
-									<span class="material-symbols-outlined align-middle">
-										visibility
-									</span>
-								</button>
-
-								<button class="btn p-0">
-									<span class="material-symbols-outlined align-middle">
-										edit
-									</span>
-								</button>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">#8</th>
-							<td>Tillie Lucero</td>
-							<td>tillie.lucero@mail.com</td>
-							<td>Yes</td>
-							<td class="text-end func-btns">
-								<button
-									class="btn p-0 me-7"
-									type="button"
-									data-bs-toggle="modal"
-									data-bs-target="#exampleModal">
-									<span class="material-symbols-outlined align-middle">
-										visibility
-									</span>
-								</button>
-
-								<button class="btn p-0">
-									<span class="material-symbols-outlined align-middle">
-										edit
-									</span>
-								</button>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">#9</th>
-							<td>Sabrina Stephenson</td>
-							<td>sabrina.stephenson@mail.com</td>
-							<td>Yes</td>
-							<td class="text-end func-btns">
-								<button
-									class="btn p-0 me-7"
-									type="button"
-									data-bs-toggle="modal"
-									data-bs-target="#exampleModal">
-									<span class="material-symbols-outlined align-middle">
-										visibility
-									</span>
-								</button>
-
-								<button class="btn p-0">
-									<span class="material-symbols-outlined align-middle">
-										edit
-									</span>
-								</button>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">#10</th>
-							<td>Annie Smith</td>
-							<td>annie.smith@mail.com</td>
-							<td>Yes</td>
-							<td class="text-end func-btns">
-								<button
-									class="btn p-0 me-7"
-									type="button"
-									data-bs-toggle="modal"
-									data-bs-target="#exampleModal">
-									<span class="material-symbols-outlined align-middle">
-										visibility
-									</span>
-								</button>
-
-								<button class="btn p-0">
-									<span class="material-symbols-outlined align-middle">
-										edit
-									</span>
-								</button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-
-				<!-- see more Modal -->
-				<div
-					class="modal fade seeMoreModal"
-					id="seeMoreModal"
-					data-bs-backdrop="static"
-					data-bs-keyboard="false"
-					tabindex="-1"
-					aria-labelledby="staticBackdropLabel"
-					aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-							<div class="modal-body p-8 d-flex">
-								<img
-									class="me-7"
-									src="../assets/images/emir.jpeg"
-									alt="Emir Picture" />
-								<div class="admin-info flex-grow-1 text-start">
-									<div class="d-flex justify-content-between">
-										<p class="m-0">#1</p>
-										<button
-											type="button"
-											class="btn-close"
-											data-bs-dismiss="modal"
-											aria-label="Close"></button>
-									</div>
-									<p class="mb-0">Admin</p>
-									<h2 class="h2 fw-bold mb-2">Emir Wicks</h2>
-									<a
-										class="text-gray-600 mb-4 d-block"
-										href="mailto:emir.wicks@mail.com"
-										>emir.wicks@mail.com</a
-									>
-									<div
-										class="d-flex justify-content-between align-items-center">
-										<p class="py-1 px-2 h5 m-0 bg-gray-100">Verified</p>
+								</th>
+								<th class="col-3" scope="col">Name</th>
+								<th class="col-4" scope="col">Email</th>
+								<th class="col-2" scope="col">Verified</th>
+								<th class="col-1" scope="col"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- 按鈕:一行資料 -->
+							<tr data-bs-toggle="modal" data-bs-target="#seeMoreModal">
+								<th scope="row">#1</th>
+								<td>Emir Wicks</td>
+								<td>emir.wicks@mail.com</td>
+								<td>Yes</td>
+								<td class="text-end func-btns">
+									<button class="btn p-0 me-7" type="button">
+										<span class="material-icons align-middle">
+											visibility
+										</span>
+									</button>
+									<button class="btn p-0">
 										<span
 											type="button"
-											class="material-symbols-outlined text-primary"
-											data-bs-toggle="collapse"
-											href="#collapse"
-											role="button"
-											aria-expanded="false"
-											aria-controls="collapseExample">
-											expand_more
+											class="material-icons align-middle"
+											data-bs-toggle="modal"
+											data-bs-target="#editAdminModal">
+											edit
 										</span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">#2</th>
+								<td>Zaina Goldsmith</td>
+								<td>zaina.goldsmith@mail.com</td>
+								<td>Yes</td>
+								<td class="text-end func-btns">
+									<button
+										class="btn p-0 me-7"
+										type="button"
+										data-bs-toggle="modal"
+										data-bs-target="#exampleModal">
+										<span class="material-icons align-middle">
+											visibility
+										</span>
+									</button>
+
+									<button class="btn p-0">
+										<span class="material-icons align-middle"> edit </span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">#3</th>
+								<td>Mahima Lopez</td>
+								<td>mahima.lopez@mail.com</td>
+								<td>Yes</td>
+								<td class="text-end func-btns">
+									<button
+										class="btn p-0 me-7"
+										type="button"
+										data-bs-toggle="modal"
+										data-bs-target="#exampleModal">
+										<span class="material-icons align-middle">
+											visibility
+										</span>
+									</button>
+
+									<button class="btn p-0">
+										<span class="material-icons align-middle"> edit </span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">#4</th>
+								<td>Pharrell Murray</td>
+								<td>pharrell.murray@mail.com</td>
+								<td>Yes</td>
+								<td class="text-end func-btns">
+									<button
+										class="btn p-0 me-7"
+										type="button"
+										data-bs-toggle="modal"
+										data-bs-target="#exampleModal">
+										<span class="material-icons align-middle">
+											visibility
+										</span>
+									</button>
+
+									<button class="btn p-0">
+										<span class="material-icons align-middle"> edit </span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">#5</th>
+								<td>Annika Mcbride</td>
+								<td>annika.mcbride@mail.com</td>
+								<td>Yes</td>
+								<td class="text-end func-btns">
+									<button
+										class="btn p-0 me-7"
+										type="button"
+										data-bs-toggle="modal"
+										data-bs-target="#exampleModal">
+										<span class="material-icons align-middle">
+											visibility
+										</span>
+									</button>
+
+									<button class="btn p-0">
+										<span class="material-icons align-middle"> edit </span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">#6</th>
+								<td>Fatimah Clark</td>
+								<td>fatimah.clark@mail.com</td>
+								<td>Yes</td>
+								<td class="text-end func-btns">
+									<button
+										class="btn p-0 me-7"
+										type="button"
+										data-bs-toggle="modal"
+										data-bs-target="#exampleModal">
+										<span class="material-icons align-middle">
+											visibility
+										</span>
+									</button>
+
+									<button class="btn p-0">
+										<span class="material-icons align-middle"> edit </span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">#7</th>
+								<td>Klaudia Rhodes</td>
+								<td>klaudia.rhodes@mail.com</td>
+								<td>Yes</td>
+								<td class="text-end func-btns">
+									<button
+										class="btn p-0 me-7"
+										type="button"
+										data-bs-toggle="modal"
+										data-bs-target="#exampleModal">
+										<span class="material-icons align-middle">
+											visibility
+										</span>
+									</button>
+
+									<button class="btn p-0">
+										<span class="material-icons align-middle"> edit </span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">#8</th>
+								<td>Tillie Lucero</td>
+								<td>tillie.lucero@mail.com</td>
+								<td>Yes</td>
+								<td class="text-end func-btns">
+									<button
+										class="btn p-0 me-7"
+										type="button"
+										data-bs-toggle="modal"
+										data-bs-target="#exampleModal">
+										<span class="material-icons align-middle">
+											visibility
+										</span>
+									</button>
+
+									<button class="btn p-0">
+										<span class="material-icons align-middle"> edit </span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">#9</th>
+								<td>Sabrina Stephenson</td>
+								<td>sabrina.stephenson@mail.com</td>
+								<td>Yes</td>
+								<td class="text-end func-btns">
+									<button
+										class="btn p-0 me-7"
+										type="button"
+										data-bs-toggle="modal"
+										data-bs-target="#exampleModal">
+										<span class="material-icons align-middle">
+											visibility
+										</span>
+									</button>
+
+									<button class="btn p-0">
+										<span class="material-icons align-middle"> edit </span>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">#10</th>
+								<td>Annie Smith</td>
+								<td>annie.smith@mail.com</td>
+								<td>Yes</td>
+								<td class="text-end func-btns">
+									<button
+										class="btn p-0 me-7"
+										type="button"
+										data-bs-toggle="modal"
+										data-bs-target="#exampleModal">
+										<span class="material-icons align-middle">
+											visibility
+										</span>
+									</button>
+
+									<button class="btn p-0">
+										<span class="material-icons align-middle"> edit </span>
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- see more Modal -->
+					<div
+						class="modal fade seeMoreModal"
+						id="seeMoreModal"
+						data-bs-backdrop="static"
+						data-bs-keyboard="false"
+						tabindex="-1"
+						aria-labelledby="staticBackdropLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-body p-8 d-flex">
+									<img
+										class="me-7"
+										src="../assets/images/emir.jpeg"
+										alt="Emir Picture" />
+									<div class="admin-info flex-grow-1 text-start">
+										<div class="d-flex justify-content-between">
+											<p class="m-0">#1</p>
+											<button
+												type="button"
+												class="btn-close"
+												data-bs-dismiss="modal"
+												aria-label="Close"></button>
+										</div>
+										<p class="mb-0">Admin</p>
+										<h2 class="h2 fw-bold mb-2">Emir Wicks</h2>
+										<a
+											class="text-gray-600 mb-4 d-block"
+											href="mailto:emir.wicks@mail.com"
+											>emir.wicks@mail.com</a
+										>
+										<div
+											class="d-flex justify-content-between align-items-center">
+											<p class="py-1 px-2 h5 m-0 bg-gray-100">Verified</p>
+											<span
+												type="button"
+												class="material-icons text-primary"
+												data-bs-toggle="collapse"
+												href="#collapse"
+												role="button"
+												aria-expanded="false"
+												aria-controls="collapseExample">
+												expand_more
+											</span>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div
-								id="collapse"
-								class="modal-footer border-top-0 pt-0 pb-8 px-8 collapse">
-								<button
-									type="button"
-									class="btn btn-outline-secondary m-0 me-4 py-1 px-8"
-									data-bs-dismiss="modal">
-									Deactivate
-								</button>
-								<button
-									type="button"
-									class="btn btn-primary m-0 py-1 px-8"
-									data-bs-toggle="modal"
-									data-bs-target="#editAdminModal">
-									Edit
-								</button>
+								<div
+									id="collapse"
+									class="modal-footer border-top-0 pt-0 pb-8 px-8 collapse">
+									<button
+										type="button"
+										class="btn btn-outline-secondary m-0 me-4 py-1 px-8"
+										data-bs-dismiss="modal">
+										Deactivate
+									</button>
+									<button
+										type="button"
+										class="btn btn-primary m-0 py-1 px-8"
+										data-bs-toggle="modal"
+										data-bs-target="#editAdminModal">
+										Edit
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<%- include("./layout/editAdminModal") -%>
-				<nav aria-label="Page navigation example">
-					<ul class="pagination justify-content-end">
-						<li class="page-item disabled">
-							<a class="page-link" href="###" aria-label="Previous">
-								<span aria-hidden="true">&lt;</span>
-							</a>
-						</li>
-						<li class="page-item active">
-							<a class="page-link" href="###">1</a>
-						</li>
-						<li class="page-item"><a class="page-link" href="###">2</a></li>
-						<li class="page-item"><a class="page-link" href="###">3</a></li>
-						<li class="page-item">
-							<a class="page-link" href="###" aria-label="Next">
-								<span aria-hidden="true">&gt;</span>
-							</a>
-						</li>
-					</ul>
-				</nav>
+					<%- include("./layout/editAdminModal") -%>
+
+					<!-- 分頁按鈕 -->
+					<nav aria-label="Page navigation example">
+						<ul class="pagination justify-content-end">
+							<li class="page-item disabled">
+								<a class="page-link" href="###" aria-label="Previous">
+									<span aria-hidden="true">&lt;</span>
+								</a>
+							</li>
+							<li class="page-item active">
+								<a class="page-link" href="###">1</a>
+							</li>
+							<li class="page-item"><a class="page-link" href="###">2</a></li>
+							<li class="page-item"><a class="page-link" href="###">3</a></li>
+							<li class="page-item">
+								<a class="page-link" href="###" aria-label="Next">
+									<span aria-hidden="true">&gt;</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
 
